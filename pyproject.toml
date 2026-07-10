@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "onchain-alerts"
+version = "0.2.1"
+description = "Tail EVM blocks via JSON-RPC, match against a watchlist, send webhooks"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Alex", email = "alex@local" }
+]
+dependencies = [
+    "httpx>=0.24.0",
+    "pydantic>=2.0.0",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+onchain-alerts = "onchain_alerts.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "respx>=0.20.0",
+]
