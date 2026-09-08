@@ -48,3 +48,5 @@ onchain-alerts --config config.yaml --from-block 19200000
 ```
 
 If you want to reset the cursor stored in sqlite, drop the `state.db` file or use `--force-start`.
+
+<!-- refreshed: 2026-09-08 -->
